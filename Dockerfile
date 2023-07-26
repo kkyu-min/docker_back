@@ -1,8 +1,5 @@
-FROM java:17
+FROM eclipse-temurin:17-jdk-alpine
 VOLUME /tmp
-EXPOSE 8081
-ARG JAR_FILE=themint-0.0.1-SNAPSHOT.jar
+ARG JAR_FILE
 COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
-ENV TZ=Asia/Seoul
-RUN apt-get install -y tzdata
