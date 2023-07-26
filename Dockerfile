@@ -1,4 +1,4 @@
-FROM java:8
+FROM java:17
 VOLUME /tmp
 EXPOSE 8081
 ARG JAR_FILE=themint-0.0.1-SNAPSHOT.jar
